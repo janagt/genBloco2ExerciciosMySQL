@@ -71,8 +71,11 @@ SELECT * FROM tb_personagem WHERE defesa BETWEEN 1000 AND 2000;
 
 SELECT * FROM tb_personagem WHERE nome LIKE "%c%";
 
+-- codigo jess
+SELECT * FROM tb_personagem INNER JOIN tb_classe on tb_classe.id = tb_personagem.id; -- nao repete ids
 
-SELECT * FROM tb_personagem INNER JOIN tb_classe on tb_classe.id = tb_personagem.id;
+-- codigo revisado vitor
+SELECT * FROM tb_personagem INNER JOIN tb_classe on tb_classe.id = tb_personagem.classe_id; -- puxa todos cadastrados, repetindo ids
 
 
 SELECT * FROM tb_classe
